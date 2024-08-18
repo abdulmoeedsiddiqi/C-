@@ -11,6 +11,6 @@ int main()
             sum+=j;
         }
         cout<<'='<<sum<<endl;
-    }
+    } 
     return 0;
 }
