@@ -1,26 +1,25 @@
 #include <iostream>
 #include <limits>
-using namespace std;
 
 int main() {
-    cout << "Simple C++ Calculator\\n";
-    cout << "Usage: enter: <number> <op> <number> (op in + - * /)\\n";
-    cout << "Example: 3.5 * 2\\n\\n";
+    std::cout << "Simple C++ Calculator\\n";
+    std::cout << "Usage: enter: <number> <op> <number> (op in + - * /)\\n";
+    std::cout << "Example: 3.5 * 2\\n\\n";
 
     double leftOperand = 0.0;
     double rightOperand = 0.0;
     char operation = 0;
 
     while (true) {
-        cout << "> ";
-        if (!(cin >> leftOperand >> operation >> rightOperand)) {
-            if (cin.eof()) {
-                cout << "\nGoodbye!\n";
+        std::cout << "> ";
+        if (!(std::cin >> leftOperand >> operation >> rightOperand)) {
+            if (std::cin.eof()) {
+                std::cout << "\nGoodbye!\n";
                 break;
             }
-            cout << "Invalid input. Please try again.\n";
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            std::cout << "Invalid input. Please try again.\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             continue;
         }
 
